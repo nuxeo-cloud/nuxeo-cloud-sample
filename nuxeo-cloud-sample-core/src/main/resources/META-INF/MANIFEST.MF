@@ -1,0 +1,10 @@
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Vendor: org.nuxeo.cloud.sample
+Bundle-Version: 1.0.0
+Bundle-Name: nuxeo-cloud-sample-core
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.nuxeo.cloud.sample.nuxeo-cloud-sample-core;singleton=true
+Nuxeo-Component: OSGI-INF/libreoffice7-contrib.xml,
+ OSGI-INF/updatedescriptionlistener-listener-contrib.xml

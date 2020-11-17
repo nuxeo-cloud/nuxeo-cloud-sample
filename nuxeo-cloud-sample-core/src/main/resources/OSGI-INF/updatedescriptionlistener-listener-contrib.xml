@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.cloud.sample.listener.updatedescriptionlistener">
+
+  <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+    <listener name="updatedescriptionlistener"
+      class="org.nuxeo.cloud.sample.UpdateDescriptionListener">
+        <event>documentCreated</event>
+        <event>documentModified</event>
+    </listener>
+  </extension>
+
+</component>
