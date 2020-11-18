@@ -15,13 +15,14 @@
   <packaging>pom</packaging>
 
   <properties>
-    <nuxeo.skip.enforcer>true</nuxeo.skip.enforcer>
     <nuxeo.target.version>11.*</nuxeo.target.version>
+    <skipNodeITs>true</skipNodeITs>
   </properties>
 
   <modules>
     <module>nuxeo-cloud-sample-core</module>
     <module>nuxeo-cloud-sample-package</module>
+    <module>nuxeo-cloud-sample-ftest</module>
   </modules>
 
   <dependencyManagement>
@@ -34,6 +35,11 @@
       <dependency>
         <groupId>org.nuxeo.cloud.sample</groupId>
         <artifactId>nuxeo-cloud-sample-package</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.cloud.sample</groupId>
+        <artifactId>nuxeo-cloud-sample-ftest</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>
@@ -87,4 +93,17 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.github.eirslett</groupId>
+          <artifactId>frontend-maven-plugin</artifactId>
+          <configuration>
+            <skip>${skipNodeITs}</skip>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>

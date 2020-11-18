@@ -1,0 +1,8 @@
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Vendor: org.nuxeo.cloud.sample
+Bundle-Version: 1.0.0
+Bundle-Name: nuxeo-cloud-sample-ftest
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.nuxeo.cloud.sample.nuxeo-cloud-sample-ftest;singleton=true

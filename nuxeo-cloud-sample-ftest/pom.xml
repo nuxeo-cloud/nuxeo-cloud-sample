@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.nuxeo.cloud.sample</groupId>
+    <artifactId>nuxeo-cloud-sample-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>nuxeo-cloud-sample-ftest</artifactId>
+  <name>Nuxeo cloud sample ftest</name>
+  <description>nuxeo-cloud-sample functional tests</description>
+
+  <properties>
+    <nodeVersion>v10.16.3</nodeVersion>
+    <npmVersion>6.11.2</npmVersion>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <configuration>
+          <installDirectory>target</installDirectory>
+          <nodeVersion>${nodeVersion}</nodeVersion>
+          <npmVersion>${npmVersion}</npmVersion>
+        </configuration>
+        <executions>
+          <execution>
+            <id>install node and npm</id>
+            <phase>pre-integration-test</phase>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>npm install</id>
+            <phase>pre-integration-test</phase>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>add nuxeo npm registry</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>pre-integration-test</phase>
+            <configuration>
+              <arguments>config set @nuxeo:registry https://packages.nuxeo.com/repository/npm-public-archives/</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm test</id>
+            <phase>integration-test</phase>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>test</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
