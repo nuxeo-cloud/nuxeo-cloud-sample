@@ -19,8 +19,9 @@
     <platform>server-@NUXEO_TARGET_VERSION@</platform>
   </platforms>
   <!-- Dependencies on other packages -->
-  <!-- <dependencies> -->
-  <!-- <package>another-package:1.0.0:1.0.0</package> -->
+  <dependencies>
+    <package>nuxeo-web-ui</package>
+  </dependencies>
   <!-- If you require JSF UI package:  -->
   <!-- <package>nuxeo-jsf-ui</package> -->
   <!-- If you require WEB UI package:  -->
