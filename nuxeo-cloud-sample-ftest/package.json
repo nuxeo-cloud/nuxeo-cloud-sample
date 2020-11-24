@@ -2,12 +2,12 @@
   "name": "nuxeo-cloud-sample-ftest",
   "description": "nuxeo-cloud-sample functional tests",
   "scripts": {
-    "test": "cd test && nuxeo-web-ui-ftest --report --screenshots --headless",
+    "test": "cd test && nuxeo-web-ui-ftest --headless",
     "test:watch": "cd test && nuxeo-web-ui-ftest --tags=@watch"
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@nuxeo/nuxeo-web-ui-ftest": "3.0.0",
+    "@nuxeo/nuxeo-web-ui-ftest": "^3.0.0",
     "cucumber": "^4.1.0"
   }
 }

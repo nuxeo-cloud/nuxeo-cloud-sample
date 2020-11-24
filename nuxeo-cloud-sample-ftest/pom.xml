@@ -36,13 +36,6 @@
             </goals>
           </execution>
           <execution>
-            <id>npm install</id>
-            <phase>pre-integration-test</phase>
-            <goals>
-              <goal>npm</goal>
-            </goals>
-          </execution>
-          <execution>
             <id>add nuxeo npm registry</id>
             <goals>
               <goal>npm</goal>
@@ -51,6 +44,13 @@
             <configuration>
               <arguments>config set @nuxeo:registry https://packages.nuxeo.com/repository/npm-public/</arguments>
             </configuration>
+          </execution>
+          <execution>
+            <id>npm install</id>
+            <phase>pre-integration-test</phase>
+            <goals>
+              <goal>npm</goal>
+            </goals>
           </execution>
           <execution>
             <id>npm test</id>
