@@ -49,7 +49,7 @@
             </goals>
             <phase>pre-integration-test</phase>
             <configuration>
-              <arguments>config set @nuxeo:registry https://packages.nuxeo.com/repository/npm-public-archives/</arguments>
+              <arguments>config set @nuxeo:registry https://packages.nuxeo.com/repository/npm-public/</arguments>
             </configuration>
           </execution>
           <execution>

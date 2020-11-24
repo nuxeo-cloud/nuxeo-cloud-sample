@@ -7,7 +7,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@nuxeo/nuxeo-web-ui-ftest": "3.0.0-SNAPSHOT",
+    "@nuxeo/nuxeo-web-ui-ftest": "3.0.0",
     "cucumber": "^4.1.0"
   }
 }
